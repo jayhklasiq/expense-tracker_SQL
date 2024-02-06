@@ -6,6 +6,8 @@ os.system("cls")
 import sqlite3
 from datetime import datetime
 
+import pprint
+
 # Connect to the database and create a cursor
 connector = sqlite3.connect('database.db')
 cursor = connector.cursor()
@@ -63,21 +65,25 @@ def filter_expenses_by_date(start_date, end_date):
 
 
 #Test Cases for each function created
-add_expense('2023-01-15', 'Groceries', 50.0)
-add_expense('2023-01-20', 'Dining out', 30.0)
+# add_expense('2023-01-15', 'Groceries', 50.0)
+# add_expense('2023-01-20', 'Date night', 30.0)
+# add_expense('2023-01-15', 'Transport', 50.0)
+# add_expense('2023-01-20', 'Dining out', 30.0)
+# add_expense('2023-01-15', 'Groceries', 50.0)
+# add_expense('2023-01-20', 'Lunch', 30.0)
 
-print("All Expenses:")
-print(get_all_expenses())
+# print("All Expenses:")
+# pprint.pprint(get_all_expenses())
 
-update_expense(1, 60.0)
+# update_expense(1, 60.0)
 
-print("\nExpenses after update:")
-print(get_all_expenses())
+# print("\nExpenses after update:")
+# pprint.pprint(get_all_expenses())
 
-delete_expense(2)
+# delete_expense(26)
 
-print("\nExpenses after delete:")
-print(get_all_expenses())
+# print("\nExpenses after delete:")
+# print(get_all_expenses())
 
 # Stretch Goal: Using Date Filtering
 start_date = '2023-01-01'
